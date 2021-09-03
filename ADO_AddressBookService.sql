@@ -44,3 +44,9 @@ values('Arka','Parui','Howrah','Kadamtala','West Bengal',722431,6242905050,'ark1
 SELECT Count(*),State,City
 FROM Address_Book
 GROUP BY State,City
+
+--UC8 Sort Names Alphabetically
+SELECT *
+FROM Address_Book
+WHERE City='Kadamtala'
+ORDER BY(FirstName)
