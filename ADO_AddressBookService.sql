@@ -81,3 +81,40 @@ WHERE FirstName='Ayush' or FirstName='Harsh'
 UPDATE Address_Book
 SET AddressBookName='Brothers',Type='Family'
 WHERE FirstName='Ram' or FirstName='Arka'
+
+--UC12 Creating Tables Based on Normalization and Er Diagram
+SELECT * FROM Address_Book
+DROP TABLE Address_Book
+
+create table AddressBook(
+AddressBookName varchar(200),
+AddressBookType varchar(200)primary key
+)
+INSERT INTO AddressBook values('Brothers','Family'),('FriendName','Friends'),('Colleague','Profession')
+SELECT * FROM AddressBook
+
+Create TABLE Contacts(
+BookType varchar(200),
+FirstName varchar(100),
+LastName varchar(100),
+Address varchar(250),
+City varchar(100),
+State varchar(100),
+Zip BigInt,
+PhoneNumber BigInt,
+EmailAddress varchar(200),
+
+Foreign key (BookType) references AddressBook(AddressBookType))
+INSERT INTO Contacts(BookType,FirstName,LastName,Address,City,State,Zip,PhoneNumber,EmailAddress) 
+values
+('Friends','Harsh','Agarwal','Howrah','Kadamtala','West Bengal',722201,9842905050,'harsh12@gmail.com'),
+('Family','Ayush','Naidu','Heritage Road','Chennai','Tamil Nadu',134002,98402000,'atushjk@gmail.com'),
+('Friends','Ankita','Joseph','Avenue Road','Lucknow','Uttar Pradesh',115627,9807651789,'anit@gmail.com'),
+('Family','Ram','Gopal','Lockheaet','Noida','Uttar Pradesh',115627,9801765434,'ram12@gmail.com'),
+('Profession','Tenzin','Seriang','GreenPark','Jorhat','Assam',122298,9256378299,'tenzi@gmail.com');
+
+Drop table Contacts
+
+
+
+
