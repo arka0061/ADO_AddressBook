@@ -23,8 +23,17 @@ values
 
 Select * from Address_Book
 
---UC4 Edit Existing Contact Using Name
+--UC4 Edit Existing Contact Using First Name
 UPDATE Address_Book
 SET PhoneNumber=8790765678
 WHERE FirstName='Tenzin'
+
+--UC5 Delete a Person Using First Name
+DELETE FROM Address_Book
+WHERE FirstName='Tenzin'
+
+--UC6 Get Contact information by city or state
+SELECT * 
+FROM Address_Book
+WHERE City='Kadamtala' or State='Tamil Nadu'
 
