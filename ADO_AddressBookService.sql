@@ -37,4 +37,10 @@ SELECT *
 FROM Address_Book
 WHERE City='Kadamtala' or State='Tamil Nadu'
 
+--UC7 Count Contacts Living by State or City
+INSERT INTO Address_Book(FirstName,LastName,Address,City,State,Zip,PhoneNumber,EmailAddress) 
+values('Arka','Parui','Howrah','Kadamtala','West Bengal',722431,6242905050,'ark12@gmail.com')
 
+SELECT Count(*),State,City
+FROM Address_Book
+GROUP BY State,City
