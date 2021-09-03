@@ -115,6 +115,10 @@ values
 
 Drop table Contacts
 
-
+--UC13 Joining Tables And Checking
+SELECT AddressBook.AddressBookName,AddressBook.AddressBookType,Contacts.FirstName,Contacts.LastName,Contacts.Address,Contacts.City,
+Contacts.State,Contacts.Zip,Contacts.PhoneNumber,Contacts.EmailAddress
+from AddressBook
+INNER JOIN Contacts ON AddressBook.AddressBookType = Contacts.BookType
 
 
