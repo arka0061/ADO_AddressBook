@@ -50,3 +50,20 @@ SELECT *
 FROM Address_Book
 WHERE City='Kadamtala'
 ORDER BY(FirstName)
+
+--UC9 AddressBookName and Type Added
+ALTER TABLE Address_Book
+ADD AddressBookName varchar(200),
+Type varchar(200);
+
+UPDATE Address_Book
+SET AddressBookName='FriendName',Type='Friends'
+WHERE FirstName='Ayush' or FirstName='Harsh'
+
+UPDATE Address_Book
+SET AddressBookName='Brothers',Type='Family'
+WHERE FirstName='Ram' or FirstName='Arka'
+
+UPDATE Address_Book
+SET AddressBookName='Colleague',Type='Profession'
+WHERE FirstName='Ankita' 
