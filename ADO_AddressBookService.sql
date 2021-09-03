@@ -67,3 +67,8 @@ WHERE FirstName='Ram' or FirstName='Arka'
 UPDATE Address_Book
 SET AddressBookName='Colleague',Type='Profession'
 WHERE FirstName='Ankita' 
+
+--UC10 Get Contacts By Type
+SELECT Count(*),Type,AddressBookName
+FROM Address_Book
+GROUP BY Type,AddressBookName
