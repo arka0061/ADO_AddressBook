@@ -72,3 +72,12 @@ WHERE FirstName='Ankita'
 SELECT Count(*),Type,AddressBookName
 FROM Address_Book
 GROUP BY Type,AddressBookName
+
+--UC11 Add Peron To Friend And Family
+UPDATE Address_Book
+SET AddressBookName='FriendName',Type='Friends'
+WHERE FirstName='Ayush' or FirstName='Harsh'
+
+UPDATE Address_Book
+SET AddressBookName='Brothers',Type='Family'
+WHERE FirstName='Ram' or FirstName='Arka'
